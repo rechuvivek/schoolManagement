@@ -52,4 +52,4 @@ Deliverables:
     https://schoolmanagement-31kn.onrender.com
 
     Postman Collection
-    https://github.com/rechuvivek/schoolManagement.git/school-management.postman_collection.json
+    [https://github.com/rechuvivek/schoolManagement.git/school-management.postman_collection.json](https://github.com/rechuvivek/schoolManagement/blob/master/school-management.postman_collection.json)
