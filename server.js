@@ -5,13 +5,23 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const db = require("./config/db");
+const schoolRoutes = require("./routes/schoolRoutes");
 
 const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-const PORT = 5000;
+app.get("/", (req, res) => {
+  res.json({
+    message:
+      "Welcome to School Management API. Use /api/addSchool to add a school or /api/listSchools to get nearby schools."
+  });
+});
+
+app.use("/api", schoolRoutes);
+
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
