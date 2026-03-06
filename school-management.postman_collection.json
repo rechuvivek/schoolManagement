@@ -1,0 +1,235 @@
+{
+  "info": {
+    "_postman_id": "94175e19-a4df-4480-9835-d2ea455c019e",
+    "name": "school-management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40890693"
+  },
+  "item": [
+    {
+      "name": "listSchoolsValid",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://schoolmanagement-31kn.onrender.com/api/listSchools?latitude=10&longitude=120",
+          "protocol": "https",
+          "host": [
+            "schoolmanagement-31kn",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "10"
+            },
+            {
+              "key": "longitude",
+              "value": "120"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "listSchoolsValid",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://schoolmanagement-31kn.onrender.com/api/listSchools?latitude=10&longitude=60",
+              "protocol": "https",
+              "host": [
+                "schoolmanagement-31kn",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "listSchools"
+              ],
+              "query": [
+                {
+                  "key": "latitude",
+                  "value": "10"
+                },
+                {
+                  "key": "longitude",
+                  "value": "60"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "listSchoolsInvalid",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://schoolmanagement-31kn.onrender.com/api/listSchools?latitude=10&longitude=\"120\"",
+          "protocol": "https",
+          "host": [
+            "schoolmanagement-31kn",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "10"
+            },
+            {
+              "key": "longitude",
+              "value": "\"120\""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ValidAddSchool",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Elephant public school\",\r\n    \"address\": \"Elephant caves\",\r\n    \"latitude\": 120,\r\n    \"longitude\": 110\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://schoolmanagement-31kn.onrender.com/api/addSchool",
+          "protocol": "https",
+          "host": [
+            "schoolmanagement-31kn",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "ValidAddSchool",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Tiger public school\",\r\n    \"address\": \"Tiger caves\",\r\n    \"latitude\": 60,\r\n    \"longitude\": 10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://schoolmanagement-31kn.onrender.com/api/addSchool",
+              "protocol": "https",
+              "host": [
+                "schoolmanagement-31kn",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "addSchool"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "InvalidAddSchool",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Elephant public school\",\r\n    \"address\": \"Elephant caves\",\r\n    \"latitude\": 120\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://schoolmanagement-31kn.onrender.com/api/addSchool",
+          "protocol": "https",
+          "host": [
+            "schoolmanagement-31kn",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "addSchool"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "InvalidAddSchool",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"address\": \"Lion caves\",\r\n    \"latitude\": 120,\r\n    \"longitude\": 80\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://schoolmanagement-31kn.onrender.com/api/addSchool",
+              "protocol": "https",
+              "host": [
+                "schoolmanagement-31kn",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "api",
+                "addSchool"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ]
+}

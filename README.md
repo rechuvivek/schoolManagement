@@ -43,3 +43,13 @@ List of endpoints:
             longitude: <> //should be a real number
         }
 3. GET /api/listSchools?latitude=<>&longitude=<> -> used to list all the schools that are in proximity to the given latitude and longitude
+
+Deliverables:
+    GitHub Repo
+    https://github.com/rechuvivek/schoolManagement.git
+
+    Live API
+    https://schoolmanagement-31kn.onrender.com
+
+    Postman Collection
+    https://github.com/rechuvivek/schoolManagement.git/school-management.postman_collection.json
